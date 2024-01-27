@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : MonoBehaviour
 {
-    public GameObject MainMenu;
-    public GameObject CreditsMenu;
+    // public GameObject MainMenu;
+    // public GameObject CreditsMenu;
 
     // Start is called before the first frame update
     void Start()
     {
-        MainMenuButton();
+        // MainMenuButton();
     }
 
     public void StartButton()
@@ -21,16 +21,12 @@ public class MainMenuButtons : MonoBehaviour
 
     public void CreditsButton()
     {
-        // Show Credits Menu
-        MainMenu.SetActive(false);
-        CreditsMenu.SetActive(true);
+        SceneManager.LoadScene(1);
     }
 
     public void MainMenuButton()
     {
-        // Show Main Menu
-        MainMenu.SetActive(true);
-        CreditsMenu.SetActive(false);
+        SceneManager.LoadScene(0);
     }
 
     public void QuitButton()

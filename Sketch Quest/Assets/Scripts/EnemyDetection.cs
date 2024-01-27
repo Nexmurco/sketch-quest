@@ -10,17 +10,17 @@ public class ExampleClass : MonoBehaviour{
         watching = false;
     }
 
-    void OnTriggerEnter(Collider sight){
-        Debug.Log ("Colliding");
-        if(sight.gameObject.tag == "Player"){
+    void OnTriggerEnter(Collider col){
+        Debug.Log(col);
+        if(col.gameObject.tag == "Player"){
             Debug.Log ("Player Collided");
             watching = true;
         }
     }
-    void OnTriggerExit(Collider sight){
-        Debug.Log ("Stopped colliding");
-        if(sight.gameObject.tag == "Player"){
-            Debug.Log ("Player Collided");
+    void OnTriggerExit(Collider col){
+        Debug.Log(col);
+        if(col.gameObject.tag == "Player"){
+            Debug.Log ("Player Stopped Colliding");
             watching = false;
         }
     }
