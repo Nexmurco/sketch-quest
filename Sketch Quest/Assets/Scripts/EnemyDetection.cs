@@ -1,14 +1,15 @@
 using UnityEngine;
 using System.Collections;
 
-public class ExampleClass : MonoBehaviour{
-    public MeshCollider sight;
+public class EnemyDetection : MonoBehaviour{
 
     public bool watching;
 
     void Start(){
         watching = false;
     }
+
+
 
     void OnTriggerEnter(Collider col){
         Debug.Log(col);
