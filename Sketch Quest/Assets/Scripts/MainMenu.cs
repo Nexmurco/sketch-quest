@@ -21,7 +21,7 @@ public class MainMenuButtons : MonoBehaviour
 
     public void CreditsButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 
     public void MainMenuButton()
