@@ -19,19 +19,15 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    // public void CreditsButton()
-    // {
-    //     // Show Credits Menu
-    //     MainMenu.SetActive(false);
-    //     CreditsMenu.SetActive(true);
-    // }
+    public void CreditsButton()
+    {
+        SceneManager.LoadScene(1);
+    }
 
-    // public void MainMenuButton()
-    // {
-    //     // Show Main Menu
-    //     MainMenu.SetActive(true);
-    //     CreditsMenu.SetActive(false);
-    // }
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene(0);
+    }
 
     public void QuitButton()
     {
