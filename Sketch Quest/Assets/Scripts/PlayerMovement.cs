@@ -24,6 +24,10 @@ public class PlayerMovement : MonoBehaviour
         if (movement.magnitude >= 0.1f)
         {
             controller.Move(direction * speed * Time.deltaTime);
+
+            //character facing direction
+            Vector3 lookDirection = direction + gameObject.transform.position;
+            gameObject.transform.LookAt(lookDirection);
         }
 
         if(movement == Vector2.zero)
@@ -34,5 +38,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetFloat("Speed", 1f);
         }
+
+        
     }
 }
