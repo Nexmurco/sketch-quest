@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserAudioController : MonoBehaviour
+public class ShinyAudioController : MonoBehaviour
 {
     private SoundController soundController;
 
@@ -11,15 +11,15 @@ public class LaserAudioController : MonoBehaviour
     void Start()
     {
         soundController = GameObject.Find("SoundController").GetComponent<SoundController>();
-        audioSource.clip = soundController.danger;
+        audioSource.clip = soundController.shine;
         audioSource.loop = true;
-        audioSource.volume = .3f;
-        Invoke("MyFunction", Random.Range(0,1));
-        
+        audioSource.volume = .7f;
+        audioSource.Play();
     }
 
     // Update is called once per frame
-    void MyFunction(){
-        audioSource.Play();  
+    void Update()
+    {
+        
     }
 }
