@@ -664,11 +664,28 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 583269258}
+    - target: {fileID: 2269206149363065328, guid: 526913fa3e62feb4588e0c6a293ebf9a, type: 3}
+      propertyPath: guard
+      value: 
+      objectReference: {fileID: 1304018272}
+    - target: {fileID: 2269206149363065328, guid: 526913fa3e62feb4588e0c6a293ebf9a, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269206149363065328, guid: 526913fa3e62feb4588e0c6a293ebf9a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 628467710}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526913fa3e62feb4588e0c6a293ebf9a, type: 3}
+--- !u!1 &1304018272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 111196, guid: 526913fa3e62feb4588e0c6a293ebf9a, type: 3}
+  m_PrefabInstance: {fileID: 1240783301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2110623595
 PrefabInstance:
   m_ObjectHideFlags: 0
