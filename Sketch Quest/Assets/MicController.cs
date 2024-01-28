@@ -123,6 +123,8 @@ public class MicController : MonoBehaviour
             clip6 = RecordingUpdate(clip6);
         }
         else if (stage == 6 && updateStage){
+            updateStage = false;
+            promptText.text = "Player 1 press any button.";
             SceneManager.LoadScene(5);
         }
     }
