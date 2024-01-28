@@ -3882,6 +3882,7 @@ GameObject:
   - component: {fileID: 6502003921327223502}
   - component: {fileID: 4262990249364965590}
   - component: {fileID: 2482966848857023027}
+  - component: {fileID: 5832032263855370143}
   m_Layer: 0
   m_Name: PhylCamera
   m_TagString: Untagged
@@ -3963,6 +3964,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208981128954719910}
   m_Enabled: 1
+--- !u!114 &5832032263855370143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208981128954719910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c795265ab9e83344942ceb536ac05b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8663837100615973586
 PrefabInstance:
   m_ObjectHideFlags: 0
