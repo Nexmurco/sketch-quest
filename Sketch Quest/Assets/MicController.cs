@@ -79,7 +79,7 @@ public class MicController : MonoBehaviour
         }
         else if (stage == 1){
             if(updateStage){
-                source.PlayOneShot(clip1, .5f);
+                
 
                 updateStage=false;
                 //set text stuff
@@ -89,7 +89,7 @@ public class MicController : MonoBehaviour
         }
         else if (stage == 2){
             if(updateStage){
-                source.PlayOneShot(clip2, .5f);
+                
                 updateStage=false;
                 //set text stuff
                 promptText.text = "Record the sound of touching something hot.";
@@ -98,7 +98,7 @@ public class MicController : MonoBehaviour
         }
         else if (stage == 3){
             if(updateStage){
-                source.PlayOneShot(clip1, .5f);
+               
                 updateStage=false;
                 //set text stuff
                 promptText.text = "Record the sound a medium amount of water makes.";
@@ -107,12 +107,12 @@ public class MicController : MonoBehaviour
         }
         else if (stage == 4){
             if(updateStage){
-                source.PlayOneShot(clip1, .5f);
+                
                 updateStage=false;
                 //set text stuff
                 promptText.text = "Record a dangerous sound.";
             }
-            clip4 = RecordingUpdate(clip5);
+            clip5 = RecordingUpdate(clip5);
         }
         else if (stage == 5){
             if(updateStage){
@@ -120,10 +120,12 @@ public class MicController : MonoBehaviour
                 //set text stuff
                 promptText.text = "Record a walkie-talkie quip.";
             }
-            clip5 = RecordingUpdate(clip6);
+            clip6 = RecordingUpdate(clip6);
         }
-        else if (stage == 6){
-            SceneManager.LoadScene(4);
+        else if (stage == 6 && updateStage){
+            updateStage = false;
+            promptText.text = "Player 1 press any button.";
+            SceneManager.LoadScene(5);
         }
     }
 }
