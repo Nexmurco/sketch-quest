@@ -36,6 +36,7 @@ public class MoveTowards : MonoBehaviour
         if(isPatrol)
         { 
             guard.transform.position = Vector3.MoveTowards(guard.transform.position, target ,speed * Time.deltaTime);
+            guard.transform.LookAt(target);
 
             if (Vector3.Distance(guard.transform.position, target) < 0.001f)
             {
@@ -43,11 +44,13 @@ public class MoveTowards : MonoBehaviour
                 {
                     target = pointB.transform.position;
                     targetisA = false;
+                    guard.transform.LookAt(target);
                 }
                 else
                 {
                     target = pointA.transform.position;
                     targetisA = true;
+                    gameObject.transform.LookAt(target);
                 }
             }
         }
