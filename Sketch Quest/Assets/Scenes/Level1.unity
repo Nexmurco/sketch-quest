@@ -8599,7 +8599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondPlayerPrefab: {fileID: 132228, guid: bf2edc0036d05e14f85217eb90c00587, type: 3}
-  spawnLocation1: {x: 0.06, y: 0.49, z: 0.67}
+  spawnLocation1: {x: 0, y: 0.32, z: 0}
   spawnLocation2: {x: 9.96, y: 0.49, z: 0.67}
   piMan: {fileID: 1188938459}
 --- !u!4 &1188938458
@@ -14005,6 +14005,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 443754, guid: 526913fa3e62feb4588e0c6a293ebf9a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9583920, guid: 526913fa3e62feb4588e0c6a293ebf9a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e159b494316673749b20e6d042c230d2, type: 2}
+    - target: {fileID: 9583920, guid: 526913fa3e62feb4588e0c6a293ebf9a, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9583920, guid: 526913fa3e62feb4588e0c6a293ebf9a, type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2232773291883714307, guid: 526913fa3e62feb4588e0c6a293ebf9a, type: 3}
