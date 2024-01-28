@@ -16,7 +16,7 @@ public class MainMenuButtons : MonoBehaviour
 
     public void StartButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(4);
     }
 
     public void CreditsButton()
