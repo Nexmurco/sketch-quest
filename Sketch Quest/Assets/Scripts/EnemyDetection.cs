@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EnemyDetection : MonoBehaviour{
 
@@ -23,9 +24,7 @@ public class EnemyDetection : MonoBehaviour{
         Debug.Log(col);
         if(col.gameObject.tag == "Player"){
             Debug.Log ("Player Collided");
-            target = player.transform.position;
-            guard.transform.position = Vector3.MoveTowards(guard.transform.position, target ,speed * Time.deltaTime);
-            watching = true;
+            SceneManager.LoadScene(1);
         }
     }
     void OnTriggerExit(Collider col){
