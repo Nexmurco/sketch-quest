@@ -17,6 +17,7 @@ public class MicController : MonoBehaviour
     public AudioClip clip3;
     public AudioClip clip4;
     public AudioClip clip5;
+    public AudioClip clip6;
 
     private string micName;
     public AudioSource source;
@@ -106,13 +107,22 @@ public class MicController : MonoBehaviour
         }
         else if (stage == 4){
             if(updateStage){
+                source.PlayOneShot(clip1, .5f);
                 updateStage=false;
                 //set text stuff
-                promptText.text = "Record a jingle for a commercial.";
+                promptText.text = "Record a dangerous sound.";
             }
-            clip5 = RecordingUpdate(clip5);
+            clip4 = RecordingUpdate(clip5);
         }
         else if (stage == 5){
+            if(updateStage){
+                updateStage=false;
+                //set text stuff
+                promptText.text = "Record a walkie-talkie quip.";
+            }
+            clip5 = RecordingUpdate(clip6);
+        }
+        else if (stage == 6){
             SceneManager.LoadScene(4);
         }
     }
