@@ -9,6 +9,7 @@ public class CameraNoRotate : MonoBehaviour
     // Update is called once per frame
     void LateUpdate() 
     {
-        transform.position = new Vector3(target.position.x, transform.position.y, target.position.z);  
+        transform.rotation = Quaternion.identity;  
+        transform.position = target.position + new Vector3(0.3f, 2, -3);
     } 
 }
