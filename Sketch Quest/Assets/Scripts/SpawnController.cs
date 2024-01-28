@@ -24,7 +24,7 @@ public class SpawnController: MonoBehaviour
 
         if (firstPlayer == null){
             Debug.Log("check!");
-            firstPlayer = GameObject.Find("Cube Player(Clone)");
+            firstPlayer = GameObject.FindWithTag("Player");
             firstPlayer.transform.position = spawnLocation1;
             piMan.playerPrefab = secondPlayerPrefab;
             //update prefab to other character
@@ -32,7 +32,7 @@ public class SpawnController: MonoBehaviour
 
         if (secondPlayer == null){
             Debug.Log("Check 2!");
-            secondPlayer = GameObject.Find("");
+            secondPlayer = GameObject.FindWithTag("Player");
             secondPlayer.transform.position = spawnLocation2;
         }
     }

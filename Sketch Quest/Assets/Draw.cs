@@ -7,7 +7,7 @@ public class Draw : MonoBehaviour
 
     LineRenderer currentLineRenderer;
 
-    Vector2 lastPos;
+    Vector3 lastPos;
 
     private void Update()
     {
@@ -22,8 +22,8 @@ public class Draw : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.Mouse0))
         {
-            PointToMousePos();
             Debug.Log("continuing line...");
+            PointToMousePos();
         }
         else 
         {
@@ -38,7 +38,8 @@ public class Draw : MonoBehaviour
 
 
         //because you gotta have 2 points to start a line renderer, 
-        Vector2 mousePos = Input.mousePosition;
+        Vector3 mousePos = m_camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_camera.transform.position.z * -1));
+        // mousePos.z = 1f;
 
         Debug.Log(mousePos);
         currentLineRenderer.SetPosition(0, mousePos);
@@ -63,7 +64,9 @@ public class Draw : MonoBehaviour
 
     void PointToMousePos() 
     {
-        Vector2 mousePos = Input.mousePosition;
+        Vector3 mousePos = m_camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_camera.transform.position.z * -1));
+        // mousePos.z = 1f;
+        Debug.Log("COMPARING POSITIONS");
         if (lastPos != mousePos) 
         {
             Debug.Log("ADDING POSITION");
