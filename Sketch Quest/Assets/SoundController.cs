@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundController : MonoBehaviour
 {
     private MicController micControllerScript;
-    private SoundController sCtrl;
+   
 
     public AudioClip sneak;
     public AudioClip shine;
@@ -18,7 +18,6 @@ public class SoundController : MonoBehaviour
     void Awake()
     {
         micControllerScript = GameObject.Find("MicController").GetComponent<MicController>();
-        SoundController = GameObject.Find("SoundController").GetComponent<SoundController>();
         Debug.Log("YO HEAR ME");
         sneak = micControllerScript.clip1;
         shine = micControllerScript.clip2;
