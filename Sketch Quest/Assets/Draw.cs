@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Draw : MonoBehaviour
 {
@@ -8,6 +9,12 @@ public class Draw : MonoBehaviour
     LineRenderer currentLineRenderer;
 
     Vector3 lastPos;
+
+    // void Start()
+    // {
+    //     capCam.targetTexture = new RenderTexture(300, 300, 24);
+    //     overlayImage.texture = capCam.targetTexture;
+    // }
 
     private void Update()
     {
@@ -22,7 +29,6 @@ public class Draw : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.Mouse0))
         {
-            Debug.Log("continuing line...");
             PointToMousePos();
         }
         else 
@@ -36,43 +42,39 @@ public class Draw : MonoBehaviour
         GameObject brushInstance = Instantiate(brush);
         currentLineRenderer = brushInstance.GetComponent<LineRenderer>();
 
-
         //because you gotta have 2 points to start a line renderer, 
         Vector3 mousePos = m_camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_camera.transform.position.z * -1));
-        // mousePos.z = 1f;
 
-        Debug.Log(mousePos);
         currentLineRenderer.SetPosition(0, mousePos);
-        // Debug.Log("CHECK 1");
-        // lastPos = mousePos;
         currentLineRenderer.positionCount++;
         currentLineRenderer.SetPosition(1, mousePos);
-        // Debug.Log("CHECK 2");
     }
 
     void AddAPoint(Vector2 pointPos) 
     {
-        Debug.Log(currentLineRenderer.positionCount);
         currentLineRenderer.positionCount++;
-        // currentLineRenderer.size++;
-        // Debug.Log(currentLineRenderer.positionCount);
         int positionIndex = currentLineRenderer.positionCount - 1;
-        Debug.Log(currentLineRenderer.positionCount);
         currentLineRenderer.SetPosition(positionIndex, pointPos);
-        Debug.Log("CHECK");
     }
 
     void PointToMousePos() 
     {
         Vector3 mousePos = m_camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_camera.transform.position.z * -1));
         // mousePos.z = 1f;
-        Debug.Log("COMPARING POSITIONS");
         if (lastPos != mousePos) 
         {
-            Debug.Log("ADDING POSITION");
             AddAPoint(mousePos);
             lastPos = mousePos;
         }
     }
 
+    // public void Save ()
+    // {
+    //     StartCoroutine(CoSave());
+    // }
+
+    // private IEnumerator CoSave()
+    // {
+    //     yield return new WaitForEndOfFrame();
+    // }
 };

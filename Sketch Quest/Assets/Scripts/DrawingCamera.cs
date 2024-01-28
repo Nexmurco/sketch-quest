@@ -10,7 +10,7 @@ public class DrawingCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        drawingCamera.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        drawingCamera.targetTexture = new RenderTexture(500, 500, 24);
         overlayImage.texture = drawingCamera.targetTexture;
     }
 
