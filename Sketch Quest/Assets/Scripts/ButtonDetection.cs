@@ -28,7 +28,6 @@ public class ButtonDetection : MonoBehaviour{
         setActive = false;
         mesh = GetComponent<MeshRenderer>();
         mesh.material.SetColor("_Color", inactiveColor);
-        //AssignColor(inactiveColor);
     }
 
     void Update(){
