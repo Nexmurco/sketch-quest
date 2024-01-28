@@ -9145,7 +9145,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9973bf08edb649f458a49a30e3fe67b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  micControllerScript: {fileID: 0}
+  sneak: {fileID: 0}
+  shine: {fileID: 0}
+  ouch: {fileID: 0}
+  water: {fileID: 0}
+  danger: {fileID: 0}
+  quip: {fileID: 0}
 --- !u!4 &612656377
 Transform:
   m_ObjectHideFlags: 0

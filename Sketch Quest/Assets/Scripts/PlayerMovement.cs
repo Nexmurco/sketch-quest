@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerInput pInput;
     public float speed = 3f;
 
+
     private Animator animator;
 
     void Start() 
@@ -20,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 movement = pInput.actions["Move"].ReadValue<Vector2>();
         Vector3 direction = new Vector3(movement.x, 0f, movement.y).normalized;
+
+        
 
         if (movement.magnitude >= 0.1f)
         {
@@ -39,6 +42,5 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", 1f);
         }
 
-        
     }
 }
