@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DrawScene.unity
     guid: 55e219baac5fd174c9ba7e4c0f07bbae
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 55c86c249303644b08ea8a4c65334518
+  - enabled: 1
+    path: Assets/Scenes/Sound Recording.unity
+    guid: 2a36c588898235c41830d1122538e7be
   m_configObjects: {}
