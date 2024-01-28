@@ -13,13 +13,13 @@ public class LaserAudioController : MonoBehaviour
         soundController = GameObject.Find("SoundController").GetComponent<SoundController>();
         audioSource.clip = soundController.danger;
         audioSource.loop = true;
-        audioSource.volume = .2f;
-        audioSource.Play();
+        audioSource.volume = .3f;
+        Invoke("MyFunction", Random.Range(0,1));
+        
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void MyFunction(){
+        audioSource.Play();  
     }
 }

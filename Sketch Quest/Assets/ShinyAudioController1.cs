@@ -13,7 +13,7 @@ public class ShinyAudioController : MonoBehaviour
         soundController = GameObject.Find("SoundController").GetComponent<SoundController>();
         audioSource.clip = soundController.shine;
         audioSource.loop = true;
-        audioSource.volume = .2f;
+        audioSource.volume = .7f;
         audioSource.Play();
     }
 

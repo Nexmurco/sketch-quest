@@ -13,7 +13,7 @@ public class WaterAudioController : MonoBehaviour
         soundController = GameObject.Find("SoundController").GetComponent<SoundController>();
         audioSource.clip = soundController.water;
         audioSource.loop = true;
-        audioSource.volume = .2f;
+        audioSource.volume = .5f;
         audioSource.Play();
     }
 
