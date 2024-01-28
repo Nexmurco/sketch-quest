@@ -55,16 +55,19 @@ public class MoveTowards : MonoBehaviour
             }
         }
     }
-        void OnTriggerEnter(Collider col)
+       
+       void OnTriggerEnter(Collider col)
     {
         Debug.Log(col);
         if(col.gameObject.tag == "Player")
         {
+            isChase = true;
+            target = player.transform.position;
+            guard.transform.position = Vector3.MoveTowards(guard.transform.position, target ,speed * Time.deltaTime);
             Debug.Log ("Player Collided");
             watching = true;
         }
-    }
-    
+    } 
 
     void OnTriggerExit(Collider col)
     {
