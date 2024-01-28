@@ -50,7 +50,7 @@ public class MoveTowards : MonoBehaviour
                 {
                     target = pointA.transform.position;
                     targetisA = true;
-                    gameObject.transform.LookAt(target);
+                    guard.transform.LookAt(target);
                 }
             }
         }
