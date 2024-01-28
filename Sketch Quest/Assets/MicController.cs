@@ -9,9 +9,9 @@ public class MicController : MonoBehaviour
 
     private AudioClip clip;
     private string micName;
-
     public AudioSource source;
     // Start is called before the first frame update
+    
     void Start()
     {
         micName = Microphone.devices[0];
