@@ -33,26 +33,23 @@ public class MoveTowards : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isPatrol)
-        { 
-            guard.transform.position = Vector3.MoveTowards(guard.transform.position, target ,speed * Time.deltaTime);
-            guard.transform.LookAt(target);
+        guard.transform.position = Vector3.MoveTowards(guard.transform.position, target ,speed * Time.deltaTime);
+        guard.transform.LookAt(target);
 
-            if (Vector3.Distance(guard.transform.position, target) < 0.001f)
+        if (Vector3.Distance(guard.transform.position, target) < 0.001f)
+        {
+            if(targetisA)
             {
-                if(targetisA)
-                {
-                    target = pointB.transform.position;
-                    targetisA = false;
-                    guard.transform.LookAt(target);
-                }
-                else
-                {
-                    target = pointA.transform.position;
-                    targetisA = true;
-                    guard.transform.LookAt(target);
-                }
+                target = pointB.transform.position;
+                targetisA = false;
+                guard.transform.LookAt(target);
             }
+            else
+            {
+                target = pointA.transform.position;
+                targetisA = true;
+                guard.transform.LookAt(target);
+            } 
         }
     }
        
